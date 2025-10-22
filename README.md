@@ -175,5 +175,3 @@ database/
 resources/views/
 routes/web.php
 ```
-
-<!-- This project demonstrates Laravel best practices including proper MVC architecture, database relationships, form validation, and efficient data handling for large datasets. -->
