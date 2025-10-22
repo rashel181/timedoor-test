@@ -24,7 +24,7 @@ In this project, i use PHP 8.2 & Laravel 10.0
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-github-repo-url>
+git clone <https://github.com/rashel181/timedoor-test.git>
 cd timedoortest-app / open the cloned project folder
 ```
 
