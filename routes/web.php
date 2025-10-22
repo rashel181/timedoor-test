@@ -21,14 +21,21 @@ use App\Http\Controllers\RatingController;
 // });
 
 
-// Route untuk Book
+/* 
+  Route untuk Book 
+*/
+
 Route::get('/', [BookController::class, 'index']);
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
 
-// rOute untuk Author
+/* 
+  rOute untuk Author 
+*/
 Route::get('/authors/top', [AuthorController::class, 'top'])->name('authors.top');
 Route::get('/authors/{author}/books', [AuthorController::class, 'books']);
 
-// ROute untuk Rating
+/* 
+  ROute untuk Rating 
+*/
 Route::get('/ratings/create', [RatingController::class, 'create'])->name('ratings.create');
 Route::post('/ratings', [RatingController::class, 'store'])->name('ratings.store');
