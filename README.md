@@ -70,7 +70,7 @@ if there's an option yes or no to create the project's database, type yes and th
 
 ### 7. Seed the Database
 
-**IMPORTANT**: This will create a large amount of data (1000 authors, 3000 categories, 100,000 books, 500,000 ratings). This process may take several minutes. Generating over 100,000 data records takes several minutes and can't be done instantly. So, we need to wait a few minutes because in this project, I'm using a batch generating fake data with Faker in batches of 500 until it reach 500000 rating records. Because if we try to batch more than 500 data records at once or do it all directly, we'll get a "memory exhausted" error when generating that much data too quickly.
+**IMPORTANT**: This will create a large amount of data (1000 authors, 3000 categories, 100,000 books, 500,000 ratings). This process may take several minutes, so we have to wait until all 4 seeders (especially RatingSeeder) status change from `running` to `done`, in my case this will take 7 minutes to generate 500K rows data. Generating over 100,000 data records takes several minutes and can't be done instantly. So, we need to wait a few minutes because in this project, I'm using a batch generating fake data with Faker in batches of 500 until it reach 500000 rating records. Because if we try to batch more than 500 data records at once or do it all directly, we'll get a "memory exhausted" error when generating that much data too quickly.
 
 ```bash
 php artisan db:seed
