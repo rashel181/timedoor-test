@@ -105,7 +105,7 @@ The application will be available at `http://localhost:8000` or `http://127.0.0.
 ### 1. List of Books Page (`/`)
 
 -   Shows books sorted by average rating (highest first)
--   Filter by number of results (10-100) (need to click submit button after that, So that the data changes according to how long it will be displayed—for example, 20 records.)
+-   Filter by number of results (10-100) (need to click submit button after that, So that the data changes according to how long it will be displayed for example, 20 records.)
 -   Search by book title or author name
 
 ### 2. Top Authors Page (`/authors/top`)
@@ -141,7 +141,6 @@ The application will be available at `http://localhost:8000` or `http://127.0.0.
 -   All data is generated using Faker
 -   Simple HTML/CSS interface (no complex styling as requested)
 -   Focus on backend logic and Laravel implementation
--   Proper validation and error handling
 
 ## Troubleshooting
 
@@ -160,8 +159,8 @@ php artisan db:seed --class=RatingSeeder
 
 ### If you encounter memory issues:
 
--   Increase PHP memory limit in php.ini
--   Consider running seeders in smaller batches (change this number in RatingSeeder, change the number in variable $batch from 500 to number lower than 500)
+-   Increase PHP memory limit in php.ini (search the line `memory_limit` in php.ini. you can access thif file for example if you're using laragon, go to PHP section, and then in the drop down, there will be an option called php.ini)
+-   Consider running seeders in smaller batches (we change this number in RatingSeeder, change the number in variable $batch from 500 to number lower than 500. Because in my case, it got stucked and only generate / stopped at around 89000 rows data, so i change the batch number from 1000 to 500)
 
 ## Project Structure
 
