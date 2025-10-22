@@ -18,14 +18,13 @@ class RatingSeeder extends Seeder
         $total = 500000;
         $batch = 500;
 
-        $minBookId = \App\Models\Book::min('id');
-        $maxBookId = \App\Models\Book::max('id');
+        $bookIds = \App\Models\Book::pluck('id')->toArray();
 
         for ($i = 0; $i < $total; $i += $batch) {
             $data = [];
             for ($j = 0; $j < $batch && ($i + $j) < $total; $j++) {
                 $data[] = [
-                    'book_id' => random_int($minBookId, $maxBookId),
+                    'book_id' => $faker->randomElement($bookIds),
                     'rating' => $faker->numberBetween(1, 10),
                     'created_at' => now(),
                     'updated_at' => now(),
