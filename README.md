@@ -50,10 +50,10 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=timedoortest_db
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
+DB_USERNAME=root
+DB_PASSWORD=
 
-Or, you can just fill in the database username, leave the password field blank, so you don't have to go through the lengthy credential entry process every time you open HeidiSQL or phpMyAdmin
+you can just fill in the database username, leave the password field blank, so you don't have to go through the lengthy credential entry process every time you open HeidiSQL or phpMyAdmin, because it's a local project and not deployed yet.
 ```
 
 ### 5. Create Database
